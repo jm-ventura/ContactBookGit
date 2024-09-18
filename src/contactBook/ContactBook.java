@@ -81,6 +81,27 @@ public class ContactBook {
         return result;
     }
 
+    public Boolean moreThanOnePhoneContact(){
+        int i = 0;
+        int h = 0;
+        int found = 0;
+        while (h < counter) {
+            int phone = contacts[h].getPhone();
+            while (i<counter ) {
+                if (contacts[i].getPhone() == phone) {
+                    found++;
+                    if (found > 1)
+                        return true;
+                }
+                i++;
+            }
+            i=0;
+            found = 0;
+            h++;
+        }
+        return false;
+    }
+
     private int searchPhoneIndex(int phone){
         int i = 0;
         int result = -1;
