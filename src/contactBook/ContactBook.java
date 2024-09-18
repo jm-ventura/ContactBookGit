@@ -95,9 +95,9 @@ public class ContactBook {
                 }
                 i++;
             }
-            i=0;
             found = 0;
             h++;
+            i=h;
         }
         return false;
     }
